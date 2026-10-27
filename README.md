@@ -1,5 +1,7 @@
 # CMPE209FinalProject - Phising extension using LLM
 
+Original repository: [https://github.com/Xainax/CMPE209FinalProject](https://github.com/Xainax/CMPE209FinalProject)
+
 Requirement
    - NodeJS version v20.0.0 or greater
    - Python 3.12
