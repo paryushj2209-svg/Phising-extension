@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/3.12/bin/python",
+  "python.terminal.useEnvFile": true
+}

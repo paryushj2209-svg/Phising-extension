@@ -1,18 +1,32 @@
 # CMPE209FinalProject - Phising extension using LLM
 
+Original repository: [https://github.com/Xainax/CMPE209FinalProject](https://github.com/Xainax/CMPE209FinalProject)
+
 Requirement
    - NodeJS version v20.0.0 or greater
-   - Python3
+   - Python 3.12
 - Build the backend:
   ```sh
         cd backend
-        python3 -m venv venv
-        # Depending on if you're using macOS or Windows, use the following commands:
-           - MacOS: source venv/bin/activate
-           - Windows: venv\Scripts\activate
+        python3.12 -m venv venv
+        source venv/bin/activate
         pip install -r requirements.txt
+        export GEMINI_API_KEY="your-key"
+        export GEMINI_MODEL="gemini-3.8-flash"
         python app.py
     ```
+
+  On Windows PowerShell, use:
+
+  ```powershell
+  cd backend
+  py -3.12 -m venv venv
+  venv\Scripts\Activate.ps1
+  pip install -r requirements.txt
+  $env:GEMINI_API_KEY = "your-key"
+  $env:GEMINI_MODEL = "gemini-3.8-flash"
+  python app.py
+  ```
 
 - Build the extension:
     ```sh
