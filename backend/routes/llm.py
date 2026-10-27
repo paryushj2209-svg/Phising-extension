@@ -39,7 +39,7 @@ def generate():
     
     client = genai.Client(api_key=api_key)
     chat = client.chats.create(
-        model="gemini-2.0-flash",
+        model="gemini-3.8-flash",
         config=types.GenerateContentConfig(
         max_output_tokens=200,
     )
