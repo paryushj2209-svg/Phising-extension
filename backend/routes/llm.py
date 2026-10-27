@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import os
 from flask import Blueprint, jsonify, request
 from google.genai import types
@@ -35,11 +34,14 @@ def generate():
         return jsonify({"error": "Missing message"}), 400
     
     api_key = os.getenv("GEMINI_API_KEY")
+    model = os.getenv("GEMINI_MODEL")
 
+    if not api_key or not model:
+        return jsonify({"error": "Set GEMINI_API_KEY and GEMINI_MODEL before starting the backend."}), 500
     
     client = genai.Client(api_key=api_key)
     chat = client.chats.create(
-        model="gemini-3.8-flash",
+        model=model,
         config=types.GenerateContentConfig(
         max_output_tokens=200,
     )
