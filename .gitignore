@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+3.12/
+node_modules/
+frontend/phishing-extension/dist/
+*.log
+.DS_Store
